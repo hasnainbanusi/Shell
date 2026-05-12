@@ -2,12 +2,17 @@
 
 #How to use conditional statement in Shebang
 
+read -p "Jetha na kis ko dekha: " bandi
+read -p "Jetha kah pyaar % " pyar
 
-read -p "Enter partner name: " bandi
-
-if [[ $bandi = "partner" ]];
+if [[ $bandi == "daya"  ]];
 then
-	echo "you are Loyal"
+	echo "Jetha is Loyal"
+elif [[ $pyar -ge 100 ]];
+then
+	echo "Jetha is very Loyal"
 else
-	echo "you are not Loyal"
+	echo "Jetha is not Loyal"
 fi
+
+#This is just for learning purpose.
