@@ -8,7 +8,7 @@ His lectures help many student to acheive their goals.
 In this Repos I will share Day by Day progress of the course in Repos one by one with every Topic cover in the lectures. 
 
 
-Follow Me for more updates on many course
+Follow Me for more updates 
 
 
 my LinkedIn Account is below follow it
