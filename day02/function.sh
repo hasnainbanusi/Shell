@@ -6,7 +6,7 @@ read -p "enter ur love name: " bandi
 read -p "pyaar in % " pyar
 
 #This is Function Declaration
-#In the same function i used agument with Dollar sign
+#In the same function i used argument with Dollar sign
 
 function is_hello() {
 if [[ $bandi == "me" ]];
