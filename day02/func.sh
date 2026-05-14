@@ -6,17 +6,18 @@ read -p "enter ur love name: " bandi
 read -p "pyaar in % " pyar
 
 #This is Function Declaration
+#In the same function i used agument with Dollar sign
 
 function is_hello() {
 if [[ $bandi == "me" ]];
 then
-	echo "U r loyal"
+	echo "$1 is loyal"
 elif [[ $pyar == "100" ]];
 then
-	echo "U r Loyal"
+	echo "$1 is Loyal"
 else
-	echo "U r Not Loyal"
+	echo "$1 is Not Loyal"
 fi
 };
 #This is function calling
-is_hello
+is_hello "tom"
