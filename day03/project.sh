@@ -13,7 +13,8 @@ install_require() {
         echo "Installing Dependencies"
         # Fix broken dependencies and install Docker and Nginx
         sudo apt-get install -f -y
-        sudo apt-get install docker.io nginx -y
+        sudo apt-get install docker.io nginx -y docker-compose
+	sudo apt-get remove --purge docker.io containerd containerd.io -y
         sudo apt-get autoremove -y
         sudo apt-get clean
 }
@@ -27,7 +28,8 @@ require_restart() {
 
 deploy() {
         docker build -t notes-app
-        docker run -d -p 8000:8000 notes-app:latest
+        #docker run -d -p 8000:8000 notes-app:latest
+	docker-compose up -d
 }
 echo "******************* Deployment started ***************"
 if ! create; then
