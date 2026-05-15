@@ -1,6 +1,8 @@
 #!/bin/bash
 
 #this is for practice
+
+# This script renames all .txt files to .bak (backup)
 << hem
 i=0
 while [[ $(($i%2))==0 && $i -le 30 ]]
