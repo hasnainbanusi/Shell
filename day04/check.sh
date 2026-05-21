@@ -23,3 +23,18 @@ install_aws() {
 	rm -rf awscliv2.zip ./aws
 }
 install_aws
+
+wait_for_instance() {
+	local instance_id="$1"
+	echo "Waiting for the instance $instance_id to run..."
+
+	while true; do
+		state=$(aws ec2 describe-instance --instance-id "$instance_id"--query 'Reservations[0].instances[0].State.Name' --output text )
+		if [[ "$state" == "running" ]]; then
+		    echo "Instance $instance_id is running..."
+			break
+		fi
+		sleep 10
+	done
+}
+wait_for_instance
